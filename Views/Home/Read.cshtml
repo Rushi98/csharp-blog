@@ -1,0 +1,13 @@
+@model Article
+
+@{
+    ViewData["Title"] = "Read";
+}
+
+<h1>@Html.DisplayFor(a => a.Title)</h1>
+
+<p>Created: @Html.DisplayFor(a => a.Created)</p>
+<p>Las Updates: @Html.DisplayFor(a => a.Updated)</p>
+<div>
+@Html.DisplayTextFor(a => a.Content)
+</div>

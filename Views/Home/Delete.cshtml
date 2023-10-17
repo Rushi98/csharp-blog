@@ -1,0 +1,24 @@
+@model Article
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<hr/>
+<h1>@Html.DisplayFor(a => a.Title)</h1>
+
+<p>Created: @Html.DisplayFor(a => a.Created)</p>
+<p>Las Updates: @Html.DisplayFor(a => a.Updated)</p>
+<div>
+    @Html.DisplayTextFor(a => a.Content)
+</div>
+<hr/>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id"/>
+    <input type="submit" value="Delete" class="btn btn-danger"/> |
+    <a asp-action="Index">Back to List</a>
+</form>
